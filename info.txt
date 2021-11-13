@@ -1,0 +1,72 @@
+./FinalEnv01 -> Env1 (Capítulo 5)
+    test-01 -> 52.5 w, step 3 w
+    test-02 -> 40.0 w, ...
+    test-03 -> 97.0 w, ...
+    test-04 -> 52.5 w, step 2 w
+    test-05 -> 52.5 w, step 4 w
+
+./FinalEnv02 -> Env2 (Capítulos 6-7)
+    test-01 -> 52.5 w, product
+    test-02 -> 40.0 w, ...
+    test-03 -> 97.0 w, ...
+
+    test-11 -> 52.5 w, sum
+    test-12 -> 40.0 w, sum
+
+    test-21 -> 52.5 w, sort
+    test-22 -> 40.0 w, sort
+
+./FinalEnv03 -> Env3 (Capítulo 6)
+    test-01 -> 52.5 w
+    test-02 -> 40.0 w
+    test-03 -> 97.0 w
+
+
+*** Relación figuras-scripts ***
+
+> all.plot.tests.py
+    5.2 [power, target: 52.5]
+    5.3 [state, target: 14]
+    # Todas las iteraciones para todas las épocas.
+
+> all.plot.tests.error.mean.py
+    5.4 [power, target: 52.5]
+    5.5 [state, target: 14]
+    # El error medio de las iteraciones para todas las épocas.
+
+> all.plot.bar
+    5.6 [power, target: 52.5]
+    5.7 [state, target: 14]
+    # El error acumulado de cada época.
+
+> chkpt.plot.tests.py
+    5.10 [power, target: 40.0]
+    5.11 [power, target: 97.0]
+    7.3 [frequency, target: 1800?, test-11]
+    7.4 [frequency, target: 2200?, test-21]
+    # Todas las iteraciones de una época.
+
+> comp.chkpt.plot.tests.error.mean.py
+    5.8 [power, tests: 01, 04, 05]
+    5.12 [power, tests: 01, 02, 03]
+    6.1 [power, target: 52.5, test-01]
+    6.2 [state, target: 14, test-01]
+    6.5 [power, target: 40.0, test-02]
+    6.7 [power, target: 97.0, test-03]
+    6.9 [power, target: 52.5, test-01]
+    6.10 [power, target: 40.0, test-02]
+    6.11 [power, target: 97.0, test-03]
+    7.2 [power, target: 52.5, tests: 01, 11, 21]
+    # El error medio de las iteraciones de una época para cada agente.
+
+> comp.chkpt.plot.bar.py
+    5.9 [power, tests: 01, 03, 04]
+    5.13 [power, tests: 01, 02, 03]
+    6.3 [power, target: 52.5, test-01]
+    6.4 [state, target: 14, test-01]
+    6.6 [power, target: 40.0, test-02]
+    6.8 [power, target: 97.0, test-03]
+    6.12 [power, target: 52.5, test-01]
+    6.13 [power, target: 40.0, test-02]
+    6.14 [power, target: 97.0, test-03]
+    # El error acumulado de una época para cada agente.
